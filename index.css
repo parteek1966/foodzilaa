@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --peru:#cd9452;
+  --black:#222;
+  --white:#fff;
+  --light-black:#666;
+  --light-white:#ccc;
+  --light-bg:#f5f5f5;
+  --dark-bg:rgba(0,0,0,.7);
+  --border:.1rem solid #aaa;
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #f47105;
+  --secondry-color: #00a149;
+  --white-color: #fff;
+  --text-color: #b0b0b0;
+  --black-color: #1E1D23;
+  --primary-font: 'Roboto', sans-serif;
+  --secondry-font: 'Quicksand', sans-serif;
+}
+
+html {
+  /* height: 100%; */
+  background-color: #f47105;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondry-color);
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-size: 58px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--white-color);
+  text-shadow: 1px 0 6px #000;
+}
+
+h1 span {
+  color: var(--primary-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  color: var(--secondry-color);
+  line-height: 3rem;
+}
+
+h4 {
+  color: var(--secondry-color);
+  font-family: var(--secondry-font);
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--black-color);
+  font-size: 1.34rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all .4s ease-out 0s;
+  -o-transition: all .4s ease-out 0s;
+  -moz-transition: all .4s ease-out 0s;
+  transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.wrapper {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+/*
+==========================================
+   Header Design
+==========================================
+*/
+.navigation-wrap{
+  position:fixed;
+  width:100%;
+  left:0;
+  z-index:1000;
+  background-color: white;
+  -webkit-transition:all 0.3s ease-out;
+  transition:all 0.3s ease-out;
+}
+.navigation-wrap .nav-item{
+  padding:0 0.625rem;
+  transition:all 0.3s linear;
+} 
+.navbar-toggler:focus{
+  outline:unset;
+  border:unset;
+  box-shadow: none;
+}
+.nav-link{
+  font-size: 1.34rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color:var(--black-color);
+  letter-spacing:1px;
+}
+.nav-link:hover,
+.nav-link.active{
+  color:var(--primary-color) !important;
+}
+.navigation-wrap .main-btn{
+  padding:0.3125rem 1.4375rem;
+  box-shadow: none;
+  margin-left:0.625rem;
+}
+
+/* Change navbar styling on scroll */
+.navigation-wrap.scroll-on{
+  position:fixed;
+  background-color:var(--white-color);
+  top:0;
+  left:0;
+  width:100%;
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+.navigation-wrap.scroll-on .nav-link{
+  color:var(--black-color);
+}
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active{
+  color:var(--primary-color);
+}
+
+/*
+==========================================
+   top-banner Design
+==========================================
+*/
+.top-banner{
+  width:100%;
+  background:url('/bg-1.jpg') no-repeat center;
+  background-size: cover;
+  padding:16.875rem 0 9.375rem;
+}
+.top-banner p{
+  color:var(--white-color);
+}
+
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+  color: var(--white-color);
+}
+@media (max-width: 991px) {
+
+    /*custom classes  */ 
+    .text-content{
+        width:100%;
+    }
+
+    /* navbar brand */ 
+    .navigation-wrap .navbar-brand img{
+        height:3.8125rem
+    }
+    .navigation-wrap{
+        text-align: center;
+        background-color: var(--white-color);
+    }
+    .navigation-wrap .nav-link{
+        line-height: 1.875rem;
+        color:var(--black-color);
+    }
+
+    /* Banner Design */ 
+    .top-banner{
+        padding:9.375rem 0 9.375rem;
+    }
+
+    /* carousel design */ 
+    .testimonial-section .carousel-caption p{
+        padding:0;
+    }
+
+    /* footer link */ 
+    .footer .footer-social a i{
+        padding:0 0.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* custom css */
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        line-height: 28px;
+    }
+
+    /* top banner */ 
+    .top-banner{
+        padding:10.375rem 0 9.375rem;
+    }
+
+    /* carousel design */ 
+    .testimonial-section .carousel-item{
+        padding:11rem 3.125rem;
+    }
+}
+
+@media (max-width:330px) {
+
+    /* carousel design */
+    .testimonial-section .carousel-item{
+        padding:13rem 3.125rem;
+    } 
+}
+        
+      
+
+
+
+
+
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+  color: var(--white-color);
+}
+
+
+/*
+==========================================
+  counter Design
+==========================================
+*/
+.counter-section{
+  background-color: var(--primary-color);
+  padding:2.5rem 0;
+}
+.counter-section p{
+  color:var(--white-color);
+  text-transform: uppercase;
+}
+*/
+.our-menu .card{
+  border:none;
+}
+.our-menu .link_category_product{
+  position:relative;
+  display:block;
+  z-index:1;
+} 
+.our-menu .link_category_product::before{
+  position:absolute;
+  content:'';
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  border:2px dotted var(--secondry-color);
+  z-index:-1;
+  transform:translateX(-50%) translateY(-50%) scale(0);
+  background:var(--primary-color);
+  -webkit-transition:all .4s ease;
+  -moz-transition:all .4s ease;
+  -ms-transition:all .4s ease;
+  -o-transition:all .4s ease;
+  transition:all .4s ease;
+}
+.card:hover .link_category_product::before{
+  transform:translateX(-50%) translateY(-50%) scale(1);
+}
+
+.our-menu .cat-title a{
+  text-align: center;
+  font-size: 0.9225rem;
+  position:relative;
+  display:inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:var(--black-color);
+}
+.card:hover .cat-title a{
+  color:var(--primary-color);
+}
+
+/*
+==========================================
+ about section Design
+==========================================
+*/
+.about-section{
+  background:var(--black-color);
+}
+.about-section .card,
+.about-section .card img{
+  border-radius: 0.625rem;
+}
+.about-section .text-sec{
+  padding-left:2rem;
+}
+ 
+.banner{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/banner-img.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: 420px 420px;
+}
+.card-img{
+  background: url("/card-img.jpg") center/cover no-repeat;
+}
+.banner h2{
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+.card-content{
+  background: #fff;
+  height: 330px;
+}
+.card-content h3{
+  text-align: center;
+  color: #000;
+  padding: 25px 0 10px 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+.form-row{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+form select, form input{
+  display: block;
+  width: 100%;
+  margin: 15px 12px;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+  color: #9a9a9a;
+}
+form input[type = submit]{
+  color: #fff;
+  background: #f47105;
+  padding: 12px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form input[type = submit]:hover{
+  opacity: 0.9;
+}
+@media(max-width: 992px){
+  .card-container{
+      grid-template-columns: 100%;
+      width: 100vw;
+  }
+  .card-img{
+      height: 330px;
+  }
+}
+
+
+
+/* footer */
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/*---Order Page---*/
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: var(--peru);
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--peru);
+  color:var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  padding:1rem 3rem;
+}
+
+.btn:hover{
+  letter-spacing: .2rem;
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading span{
+  font-size: 2.5rem;
+  color:var(--peru);
+}
+
+.heading h3{
+  font-size: 4.5rem;
+  color:var(--black);
+}
+
+
+.order{
+  background: #f47105;
+}
+
+.form-order{
+  margin: 7rem;
+}
+
+.order .heading span{
+  color:#fff;
+}
+
+.order .heading h3{
+  color:#fff;
+}
+
+.order form{
+  padding:2rem;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.order form .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.order form .box-container .box{
+  flex:1 1 41rem;
+}
+
+.order form .box-container .box .inputBox input,
+.order form .box-container .box .inputBox textarea{
+  width: 100%;
+  margin:1rem 0;
+  padding:1.2rem 1.4rem;
+  font-size: 1.7rem;
+  color:var(--light-black);
+  border:var(--border);
+  text-transform: none;
+}
+
+.order form .box-container .box .inputBox input::placeholder,
+.order form .box-container .box .inputBox textarea::placeholder{
+  text-transform: capitalize;
+}
+
+.order form .box-container .box .inputBox input:focus,
+.order form .box-container .box .inputBox textarea:focus{
+  background: var(--black);
+  color:var(--white);
+}
+
+.order form .box-container .box .inputBox input:focus::placeholder,
+.order form .box-container .box .inputBox textarea:focus::placeholder{
+  color:var(--light-white);
+}
+
+.order form .box-container .box .inputBox textarea{
+  height: 20rem;
+  resize: none;
+}
+
+.order form .box-container .box .inputBox .map{
+  height: 20rem;
+  width: 100%;
+  margin:1rem 0;
+}
+
+.order form .box-container .box .inputBox span{
+  color:var(--light-black);
+  font-size: 2rem;
+}
